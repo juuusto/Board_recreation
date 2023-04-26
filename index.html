@@ -1,0 +1,724 @@
+<html>
+
+<head>
+  <title>Board recreation 29.4.2023</title>
+  <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://westeurope1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=fFNQTw&docid=https%3A%2F%2Fayyfi.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!zG9FqV-bVUeLy-ePWPbmkfWuIBLvoJtFkA4PsXGH_b9DRB1wdw6IRpvQ2BnGsXrX%2Fitems%2F01JK2Q6LPGXJOUJ3MQSVDKC7FBDE7RD2AN%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvYXl5Zmkuc2hhcmVwb2ludC5jb21AMDhmYjdlZDMtMTE3Ni00MmQwLThhYTMtYTcxYzljN2YyMDdhIiwiaXNzIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwIiwibmJmIjoiMTY4MjUzMjAwMCIsImV4cCI6IjE2ODI1NTM2MDAiLCJlbmRwb2ludHVybCI6Inp6Njd5clJ0YjNCaTBRUUNvQ1ZvNjlobGtCUlpPdEl0QWVRWmI1d3JRY289IiwiZW5kcG9pbnR1cmxMZW5ndGgiOiIxMTIiLCJpc2xvb3BiYWNrIjoiVHJ1ZSIsInZlciI6Imhhc2hlZHByb29mdG9rZW4iLCJzaXRlaWQiOiJZVGswTlRabVkyTXRPV0kxWmkwME56VTFMVGhpWTJJdFpUYzRaalU0WmpabE5qa3giLCJzaWduaW5fc3RhdGUiOiJbXCJrbXNpXCJdIiwibmFtZWlkIjoiMCMuZnxtZW1iZXJzaGlwfG9za2FyaS5qYXJ2aW5lbkBheXkuZmkiLCJuaWkiOiJtaWNyb3NvZnQuc2hhcmVwb2ludCIsImlzdXNlciI6InRydWUiLCJjYWNoZWtleSI6IjBoLmZ8bWVtYmVyc2hpcHwxMDAzMjAwMTlhZGNkNDBjQGxpdmUuY29tIiwic2lkIjoiNzg0ZjE0OTctZDAwNy00ZGE3LWEwNTEtMTg0NGViNWFiZTYyIiwidHQiOiIwIiwidXNlUGVyc2lzdGVudENvb2tpZSI6IjMiLCJpcGFkZHIiOiIyMDAxOjE0YmE6YTMwMTo5NWUwOjoxIn0.UE5jemZWamJiazVISjlYV29sbVgrVDIyYnFYYk0yNThYY1BtWlR4SDJhUT0&cTag=%22c%3A%7B445DBAE6-90ED-4695-A17C-A1193F11E80D%7D%2C3%22&encodeFailures=1&width=624&height=208&srcWidth=624&srcHeight=208">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Mobile Styles */
+    @media (max-width: 400px) {
+      * {
+        --body-top-margin: 40vh;
+        --envelope-top-margin: 0vh;
+        --invite-top-margin: 3.625vh;
+        --checkbox-width: 100px;
+        --envelope-width: 100vw;
+        --invite-width: 100vw;
+        --watermark-width: 50vw;
+        --envelope-lid-height: 20vh;
+        --envelope-rest-height: 10vh;
+        --envelope-left-margin: 0vw;
+        --invite-left-margin: 0px;
+      }
+
+      .footer {
+        position: relative;
+      }
+
+    }
+
+    /* Tablet Styles */
+    @media (min-width: 401px) and (max-width: 960px) {
+      * {
+        --body-top-margin: 25vh;
+        --envelope-top-margin: 0vh;
+        --invite-top-margin: 3.625vh;
+        --checkbox-width: calc(var(--envelope-height) * 0.33);
+        --envelope-width: 80vw;
+        --invite-width: 80vw;
+        --watermark-width: 40vw;
+        --envelope-lid-height: 40vh;
+        --envelope-rest-height: 10vh;
+        --envelope-left-margin: 10vw;
+        --invite-left-margin: 10vw;
+      }
+
+      .footer {
+        position: relative;
+      }
+    }
+
+    /* Desktop Styles */
+    @media (min-width: 961px) {
+      * {
+        --body-top-margin: 25vh;
+        --envelope-top-margin: 0vh;
+        --invite-top-margin: 12.5vh;
+        --envelope-width: 60vw;
+        --checkbox-width: calc(var(--envelope-height) * 0.33);
+        --invite-width: 60vw;
+        --watermark-width: 20vw;
+        --envelope-lid-height: 40vh;
+        --envelope-rest-height: 10vh;
+        --envelope-left-margin: 20vw;
+        --invite-left-margin: 20vw;
+      }
+    }
+
+    * {
+      color: white;
+      size: 15px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-sizing: border-box;
+
+      --logo-width-to-height-ratio: calc(56 / 64);
+      --checkbox-height: calc(var(--checkbox-width) * var(--logo-width-to-height-ratio));
+      --watermark-height: calc(var(--watermark-width) * var(--logo-width-to-height-ratio));
+      --cover-height: calc(100vh - var(--envelope-height));
+      --envelope-height: calc(var(--envelope-lid-height) + var(--envelope-rest-height));
+
+      --seal-top-margin: calc(0px - var(--checkbox-height));
+      --seal-left-margin: calc(0px - var(--checkbox-width) / 2);
+      --opener-top-margin: calc(var(--body-top-margin) + var(--envelope-lid-height) - var(--checkbox-height));
+      --opener-left-margin: calc(var(--envelope-left-margin) + var(--envelope-width) / 2 - var(--checkbox-width) / 2);
+
+      --envelope-color: #FAEFC6;
+      --envelope-back-color: #F6E8B6;
+      --invitation-color: #a6a6a6;
+      --seal-color: grey;
+      --logo-color: black;
+
+      --reveal-animation-duration: 0.5s;
+      --open-animation-duration: 2s;
+      --fold-animation-duration: 1.5s;
+      --slide-animation-duration: var(--open-animation-duration);
+      --start-delay: 0s;
+      --fold-animation-delay: calc(var(--start-delay) + var(--open-animation-duration) * 0.5);
+      animation-delay: var(--start-delay);
+      --envelope-drop-distance: calc(var(--envelope-height));
+    }
+
+    body {
+      text-align: right;
+      vertical-align: sub;
+      margin: 0;
+      background: black;
+      overflow-x: hidden;
+    }
+
+    .seal {
+      width: var(--checkbox-width);
+      height: var(--checkbox-height);
+      position: absolute;
+      top: var(--seal-top-margin);
+      left: var(--seal-left-margin);
+    }
+
+    .opener {
+      top: var(--opener-top-margin);
+      left: var(--opener-left-margin);
+      transform: scale(1.2);
+    }
+
+    .wax {
+      transform: scale(1.2);
+      border-radius: 50%;
+      background: var(--seal-color);
+      box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.75);
+      transition: box-shadow 0.2s linear;
+    }
+
+    input:hover~* .wax {
+      box-shadow: 0px 12px 10px 6px rgba(0, 0, 0, 0.75);
+    }
+
+    .gleam {
+      background: transparent;
+      box-shadow: inset 0px 50px 75px -22px rgba(255, 255, 255, 1);
+      transition: box-shadow 0.2s linear;
+    }
+
+    input:hover~* .gleam {
+      box-shadow: inset 0px calc(var(--checkbox-height)-50px) 75px -22px rgba(255, 255, 255, 1);
+    }
+
+    #logo {
+      background: url("https://ayyfi.sharepoint.com/:i:/r/viestinta/Dokumentit/Kuvat%20%26%20Kuvitukset%20-%20Pictures%20and%20graphics/Viestinn%C3%A4n%20kuvapankki%20-%20Photo%20bank/Grafiikat%20-Graphics/hanhi_ei%20teksti%C3%A4_ympyr%C3%A4.png?csf=1&web=1&e=gB7RfC");
+      opacity: 0.2;
+      transform: rotateX(0);
+      transition: transform 0.2s;
+    }
+
+    input:hover~* #logo {
+      transform: rotateX(10deg)
+    }
+
+    input:hover~* .lid {
+      transition: transform 0.2s;
+      transform: rotateX(5deg)
+    }
+
+    input[type=checkbox] {
+      z-index: 1;
+      opacity: 0;
+    }
+
+    input[type=checkbox]:not(:checked)~#animated-container {
+      animation: reveal var(--reveal-animation-duration) cubic-bezier(0, .12, 0, 1.18) forwards;
+      overflow-y: hidden;
+    }
+
+    input[type=checkbox]:not(:checked)~#animated-container * {
+      animation: none;
+    }
+
+    input[type=checkbox]:not(:checked)~#animated-container .envelope-shadow-overlay {
+      clip-path: none;
+    }
+
+    input[type=checkbox]:checked {
+      display: none
+    }
+
+    .container {
+      background: black;
+      width: 100%;
+      position: absolute;
+      top: var(--body-top-margin);
+      transform: rotate3d(1, 1, 0, 70deg) rotateZ(0deg) translate3d(-150vw, 0px, 0px);
+      transform-origin: center;
+      height: var(--envelope-height);
+    }
+
+    input[type=checkbox]:checked~#animated-container {
+      transform: initial;
+    }
+
+    #animated-container {
+      background: none;
+    }
+
+    .envelope {
+      border: solid;
+      border-width: var(--envelope-lid-height) calc(var(--envelope-width) / 2);
+      border-bottom-width: calc(var(--envelope-height) - var(--envelope-lid-height));
+      border-color: transparent var(--envelope-color) var(--envelope-color);
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: var(--envelope-top-margin);
+      left: var(--envelope-left-margin);
+      animation: envelope-fade var(--open-animation-duration) cubic-bezier(.07, 1.7, 1, 1.22) both;
+      border-radius: 1%/2%;
+    }
+
+    .envelope-back {
+      border-color: var(--envelope-back-color);
+    }
+
+    .envelope-shadow-overlay {
+      width: var(--envelope-width);
+      height: var(--envelope-height);
+      border: 0;
+      background: transparent;
+      box-shadow: inset 0px -54px 69px 8px rgba(0, 0, 0, 0.39);
+      animation: envelope-fade var(--open-animation-duration) cubic-bezier(.07, 1.7, 1, 1.22) both;
+      clip-path: polygon(0 0, 50% var(--envelope-lid-height), 100% 0px, 100% 100%, 0px 100%);
+    }
+
+    .lid {
+      border-color: var(--envelope-color) transparent transparent;
+      animation: envelope-lid-swing var(--open-animation-duration) cubic-bezier(.07, 1.7, 1, 1.22) both;
+      transform-origin: top;
+    }
+
+    .lid-wrapper {
+      top: 0;
+      left: 0;
+      border: none;
+    }
+
+    .lid-z-transition {
+      animation: lid-z-transition var(--open-animation-duration) linear both;
+    }
+
+    .lid-placeholder {
+      border-color: transparent;
+      top: calc(0px - var(--envelope-lid-height));
+      left: calc(0px - var(--envelope-width) / 2);
+      animation: lid-placeholder var(--open-animation-duration) linear both;
+    }
+
+    .lid-shadow-overlay {
+      position: absolute;
+      top: calc(0px - var(--envelope-lid-height));
+      left: calc(0px - var(--envelope-width) / 2);
+      width: var(--envelope-width);
+      height: var(--envelope-height);
+      border: 0;
+      background: transparent;
+      box-shadow: inset 5px 132px 24px -122px rgba(0, 0, 0, 0.39);
+    }
+
+    .still {
+      animation: none;
+    }
+
+    .cover {
+      position: absolute;
+      top: var(--envelope-height);
+      left: 0;
+      width: calc(var(--invite-left-margin) + var(--invite-width));
+      height: var(--cover-height);
+      background: black;
+      animation: envelope-fade var(--open-animation-duration) cubic-bezier(.07, 1.7, 1, 1.22) both;
+    }
+
+    #invite {
+      animation: slide-top var(--slide-animation-duration) cubic-bezier(.07, 1.7, 1, 1.22) both;
+      margin-left: var(--invite-left-margin);
+      z-index: 1;
+    }
+
+    .invite-piece {
+      margin: 0;
+      text-align: center;
+      padding: 10px 0;
+      background: var(--invitation-color);
+      width: var(--invite-width);
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+
+    .invite-piece .title {
+      flex: 1 1 100%;
+    }
+
+    .invite-piece .column1 {
+      flex: 1 1 400px;
+    }
+
+    .invite-piece .column2 {
+      flex: 1 1 200px;
+      border-left: dotted 2px white;
+      border-right: dotted 2px white;
+      vertical-align: center;
+    }
+
+    .invite-piece .column2 * {
+      text-align: center;
+    }
+
+    .invite-piece .flex-column-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .invite-piece .row1 {
+      flex: 1 1 200px;
+      border-left: dotted 2px white;
+    }
+  </style>
+  <style>
+    .watermark::before {
+      content: "";
+      position: absolute;
+      width: var(--watermark-width);
+      height: var(--watermark-height);
+      top: calc(0px - var(--watermark-height) * 0.05);
+      left: calc(0px - var(--watermark-width) * 0.2);
+      opacity: 0.2;
+      background-image: url("");
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+    }
+
+    .invite::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: .7;
+    }
+
+    .fold-container {
+      position: relative;
+    }
+
+    .fold-container .fold {
+      position: absolute;
+    }
+
+    .fold-container .first-half {
+      clip-path: inset(0px 0px 50% 0px);
+    }
+
+    .fold-container .second-half {
+      top: -0.4px;
+      clip-path: inset(49.5% 0px 0px 0px);
+      animation: open-fold var(--fold-animation-duration) cubic-bezier(.7, .33, .33, .7) both;
+      animation-delay: var(--fold-animation-delay);
+    }
+
+    .fold-container .second-half * {
+      animation: fade-folding-text var(--fold-animation-duration) cubic-bezier(.7, .33, .33, .7) both;
+      animation-delay: var(--fold-animation-delay);
+    }
+
+    .invite-gleam {
+      box-shadow: inset 50px 50px 75px -22px rgba(200, 200, 200, 1);
+      transition: box-shadow 0.2s linear;
+    }
+
+    .invite-gleam {
+      box-shadow: inset -50px -50px 75px -22px rgba(200, 200, 200, 1);
+    }
+
+    .invite-piece p {
+      padding: 0px 60px;
+      text-align: justify;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    h2,
+    h3,
+    h4 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    .invite-piece h1 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 50%;
+      font-size: 4em;
+      text-shadow: 2px 2px 3px black;
+    }
+
+    .regards {
+      font-family: 'Courgette', cursive;
+    }
+
+
+
+    #front {}
+
+    #second-half-down-flip {
+      display: block;
+      margin-top: -1px;
+      border-top: dotted 2px;
+      animation: down-flip 0.5s cubic-bezier(.07, 1.7, 1, 1.72) both;
+      animation-delay: calc(var(--open-animation-duration) + var(--fold-animation-delay) + 1s);
+    }
+
+    #second-half-down-flip * {
+      text-align: center;
+    }
+
+
+    .footer {
+      opacity: 0.1;
+    }
+
+    .otherwordly {
+      animation: otherworldly-pulse 10s both infinite alternate;
+      animation-delay: 5s;
+    }
+
+    @keyframes reveal {
+      0% {}
+
+      100% {
+        transform: initial;
+      }
+    }
+
+    @keyframes slide-top {
+      0% {
+        transform: translateY(0);
+      }
+
+      15% {
+        transform: translateY(calc(0px + var(--envelope-height)));
+      }
+
+
+      100% {
+        transform: translateY(calc(0px - var(--body-top-margin) + var(--invite-top-margin)));
+      }
+    }
+
+    @keyframes down-flip {
+      0% {
+        transform: rotateX(-90deg);
+        transform-origin: top;
+      }
+
+      50% {
+        transform: rotateX(0deg);
+        transform-origin: top;
+      }
+    }
+
+
+    @keyframes envelope-lid-swing {
+      0% {
+        transform: rotateX(0);
+      }
+
+      100% {
+        transform: rotateX(180deg);
+      }
+    }
+
+    @keyframes lid-placeholder {
+      0% {
+        border-color: transparent;
+      }
+
+      4.99% {
+        border-color: transparent;
+      }
+
+      5% {
+        border-color: var(--envelope-back-color) transparent transparent;
+      }
+
+      100% {
+        border-color: var(--envelope-back-color) transparent transparent;
+      }
+    }
+
+    @keyframes lid-z-transition {
+      0% {
+        z-index: auto;
+      }
+
+      4.99% {
+        z-index: auto;
+      }
+
+      5% {
+        z-index: -1;
+      }
+
+      100% {
+        z-index: -1;
+      }
+    }
+
+    @keyframes envelope-fade {
+      0% {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      99.9% {
+        z-index: auto;
+      }
+
+      100% {
+        opacity: -1;
+        transform: translateY(var(--envelope-drop-distance));
+        z-index: -1;
+      }
+    }
+
+    @keyframes lid-fade {
+      0% {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: -1;
+        transform: translateY(var(--envelope-drop-distance));
+      }
+    }
+
+    @keyframes gleam {
+      0% {
+        box-shadow: inset 41px 50px 75px -22px rgba(255, 255, 255, 1);
+      }
+
+      100% {
+        box-shadow: inset calc(var(--checkbox-width)-41px) calc(var(--checkbox-height)-50px) 75px -22px rgba(255, 255, 255, 1);
+      }
+    }
+
+    @keyframes open-fold {
+      0% {
+        transform: rotateX(-180deg);
+      }
+
+      100% {
+        transform: initial;
+      }
+    }
+
+    @keyframes fade-folding-text {
+      0% {
+        color: rgba(0, 0, 0, 0);
+        text-shadow: none;
+        border-color: transparent;
+      }
+
+      49% {
+        color: rgba(0, 0, 0, 0);
+        text-shadow: none;
+        border-color: transparent;
+      }
+
+      50% {
+        color: white;
+        text-shadow: 1px 1px 2px black;
+        border-color: white;
+      }
+
+      100% {
+        color: white;
+        text-shadow: 1px 1px 2px black;
+        border-color: white;
+      }
+    }
+
+    @keyframes otherworldly-pulse {
+      90% {
+        color: white;
+      }
+      100% {
+        color: purple;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" class="seal opener">
+  <div class="container" id="animated-container">
+    <div class="envelope envelope-back"></div>
+    <div id="invite">
+      <div class="fold-container">
+        <div class="invite-piece invite-gleam fold first-half" id="first-page">
+          <div class="watermark"></div>
+          <div class="title">
+            <i>
+              <h3>You are cordially invited to</h3>
+            </i>
+            <h1><b>Oskari's Physical & Mental Recovery - Workshop</b></h1>
+            <h3>To make you feel better.</h3>
+          </div>
+          <div class="column1">
+            <p>The board has an apartment appro – To keep everybody without hangover, join the Oskari's Physical & Mental Recovery - Workshop, the now mythically almost traditional destroyer of hangover.</p>
+            <p>The celebration begins on Saturday, 29th of Saturday, at 11:00 at Keskustoimisto with cocktails, fine snacks and entertainment. At the same venue, around 18:00, we will have a spectacle called Fuksispeksit.</span> The night tops off with the Tour de Walpuri – and who knows where the night leads after that?</p>
+            <p>The event is free of charge.</p>
+          </div>
+          <div class="column2 flex-column-container">
+            <p><b>What?</b><br>
+              Oskari's Physical & Mental Recovery - Workshop</p>
+            <p><b>When?</b><br>
+              29.4.2023 11:00</p>
+            <p><b>Where?</b><br>
+              Keto, Otaniemi</p>
+            <p><b>Dresscode?</b><br>
+              Everything that includes clothes</p>
+            <p><b>How much?</b><br>
+              Free</p>
+            <p><b>Why?</b><br>
+              To keep the Lizard disco far away!</p>
+          </div>
+        </div>
+        <div class="invite-piece invite-gleam fold second-half">
+          <div class="title">
+            <i>
+              <h3>You are cordially invited to</h3>
+            </i>
+            <h1><b>Oskari's Physical & Mental Recovery - Workshop</b></h1>
+            <h3>To make you feel better.</h3>
+          </div>
+          <div class="column1">
+            <p>The board has an apartment appro – To keep everybody without hangover, join the Oskari's Physical & Mental Recovery - Workshop, the now mythically almost traditional destroyer of hangover.</p>
+            <p>The celebration begins on Saturday, 29th of Saturday, at 11:00 at Keskustoimisto with cocktails, fine snacks and entertainment. At the same venue, around 18:00, we will have a spectacle called Fuksispeksit.</span> The night tops off with the Tour de Walpuri – and who knows where the night leads after that?</p>
+            <p>The event is free of charge.</p>
+          </div>
+          <div class="column2 flex-column-container">
+            <p><b>What?</b><br>
+              Oskari's Physical & Mental Recovery - Workshop</p>
+            <p><b>When?</b><br>
+              29.4.2023 11:00</p>
+            <p><b>Where?</b><br>
+              Keto, Otaniemi</p>
+            <p><b>Dresscode?</b><br>
+              Everything that includes clothes</p>
+            <p><b>How much?</b><br>
+              Free</p>
+            <p><b>Why?</b><br>
+              To keep the Lizard disco far away!</p>
+          </div>
+        </div>
+        <div class="invite-piece invite-gleam" style="opacity:0;">
+          <div class="title">
+            <i>
+              <h3>You are cordially invited to</h3>
+            </i>
+            <h1><b>Oskari's Physical & Mental Recovery - Workshop</b></h1>
+            <h3>To make you feel better.</h3>
+          </div>
+          <div class="column1">
+            <p>The board has an apartment appro – To keep everybody without hangover, join the Oskari's Physical & Mental Recovery - Workshop, the now mythically almost traditional destroyer of hangover.</p>
+            <p>The celebration begins on Saturday, 29th of Saturday, at 11:00 at Keskustoimisto with cocktails, fine snacks and entertainment. At the same venue, around 18:00, we will have a spectacle called Fuksispeksit.</span> The night tops off with the Tour de Walpuri – and who knows where the night leads after that?</p>
+            <p>The event is free of charge.</p>
+          </div>
+          <div class="column2 flex-column-container">
+            <p><b>What?</b><br>
+              Oskari's Physical & Mental Recovery - Workshop</p>
+            <p><b>When?</b><br>
+              29.4.2023 11:00</p>
+            <p><b>Where?</b><br>
+              Keto, Otaniemi</p>
+            <p><b>Dresscode?</b><br>
+              Everything that includes clothes</p>
+            <p><b>How much?</b><br>
+              Free</p>
+            <p><b>Why?</b><br>
+              To keep the Lizard disco far away!</p>
+          </div>
+        </div>
+        <div class="invite-piece" id="second-half-down-flip">
+          <p>We hope to see You at this historical party!</p>
+          <p><i class="regards">Best Regards,</i></p>
+          <p><i class="regards">MISTER X</i></p>
+        </div>
+      </div>
+    </div>
+    <div class="cover"></div>
+    <div class="envelope"></div>
+    <div class=" envelope lid-wrapper lid-z-transition">
+      <div class="envelope lid-wrapper">
+        <div class="envelope lid">
+          <div class="seal wax"></div>
+          <div class="seal wax gleam"></div>
+          <div class="seal" id="logo"></div>
+          <div class="envelope lid-placeholder"></div>
+          <div class="lid-shadow-overlay"></div>
+        </div>
+      </div>
+    </div>
+    <div class="envelope envelope-shadow-overlay" id="animated-envelope-shadow"></div>
+  </div>
+  <div class="footer">© Ilmari Tarpila 2022</div>
+</body>
+</html>
